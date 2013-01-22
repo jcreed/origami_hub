@@ -1,0 +1,29 @@
+<h1>Alphabetical Origamis</h1>
+
+<table class="table table-striped table-bordered" cellpadding="15" >
+	
+  <tr>
+    <th>Name</th>
+    <th>Artist</th>
+  </tr>
+  
+  <% @origamis.each do |origami| %>
+  <tr>
+  	<td><%= origami.name %></td>
+  	<td><%= origami.artist %></td>
+  </tr>
+  <% end %>
+
+</table>
+
+<div class="btn-group">
+	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+		Actions
+		<span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu">
+		<li><a tabindex="-1" </a><%= link_to "Action", origamis_path%></li>
+		<li><a tabindex="-1" href="#">Other Action</a></li>
+		<li><a tabindex="-1" href="#">Different Action</a></li>
+	</ul>
+</div>

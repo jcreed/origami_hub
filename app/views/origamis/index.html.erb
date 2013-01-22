@@ -1,0 +1,27 @@
+<h1>All Origamis</h1>
+
+<table class="table table-condensed" cellpadding="20">
+  <tr>
+    <th>Name</th>
+    <th>Artist</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @origamis.each do |origami| %>
+  <tr>
+    <td><%= origami.name %></td>
+    <td><%= origami.artist %></td>
+    <td><%= link_to 'Show', origami %></td>
+    <td><%= link_to 'Order', new_orig_order_path(origami) %></td>
+    <td><%= link_to 'Edit', edit_origami_path(origami) %></td>
+    <td><%= link_to 'Destroy', origami, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Sign Up', new_customer_path %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<a class="btn btn-small btn-primary" <%= link_to 'Add Origami', new_origami_path %> </a>

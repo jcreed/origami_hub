@@ -1,0 +1,16 @@
+table,th,td
+{
+	width:50%;
+	border: 1px solid black;
+}
+th
+{
+	background-color:yellow;
+	height:10px;
+	text-align:center;
+}
+td
+{
+	background-color:lightblue;
+	height:5px;
+}
